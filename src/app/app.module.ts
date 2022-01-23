@@ -8,6 +8,7 @@ import {ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import { CommentListComponent } from './comment-list/comment-list.component';
 import { HomeListComponent } from './home-list/home-list.component';
+import { CommentCreateComponent } from './comment-create/comment-create.component';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { HomeListComponent } from './home-list/home-list.component';
     AppComponent,
     CommentListComponent,
     HomeListComponent,
+    CommentCreateComponent,
 
   ],
   imports: [
