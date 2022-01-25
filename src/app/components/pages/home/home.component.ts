@@ -15,10 +15,10 @@ export class HomeComponent implements OnInit {
 
   isLoggedIn(): boolean {
     if(localStorage.getItem("currentUser") != null){
-      console.log("logged in")
       return true;
     }
     return false;
+
   }
 
 }
