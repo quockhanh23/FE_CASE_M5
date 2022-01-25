@@ -5,9 +5,7 @@ import { HouseCreateComponent } from './house-create/house-create.component';
 import { HouseUpdateComponent } from './house-update/house-update.component';
 import { HouseDetailComponent } from './house-detail/house-detail.component';
 import {RouterModule, Routes} from "@angular/router";
-import {AppModule} from "../../app.module";
 import {CommentListComponent} from "./comment-list/comment-list.component";
-import {CommentCreateComponent} from "./comment-create/comment-create.component";
 import {ReactiveFormsModule} from "@angular/forms";
 
 
@@ -33,8 +31,7 @@ const routes: Routes = [
     HouseCreateComponent,
     HouseUpdateComponent,
     HouseDetailComponent,
-    CommentListComponent,
-    CommentCreateComponent
+    CommentListComponent
   ],
   imports: [
     CommonModule,
