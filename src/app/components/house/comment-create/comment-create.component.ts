@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Comment} from "../../../models/comment";
 import {FormBuilder, FormControl, FormGroup} from "@angular/forms";
 import {CommentService} from "../../../services/comment.service";
@@ -10,9 +10,10 @@ import {Router} from "@angular/router";
   styleUrls: ['./comment-create.component.css']
 })
 export class CommentCreateComponent implements OnInit {
-  comment!: Comment[]
+  @Input() houseId: any
+
   commentForm: FormGroup = this.fb.group({
-    id: new FormControl(''),
+
     content: new FormControl(''),
   });
 
@@ -22,15 +23,20 @@ export class CommentCreateComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.commentService.getAll().subscribe(rs => {
-      // @ts-ignore
-      this.comment = rs
-      console.log(rs)
-    });
+
   }
 
   submit() {
+    let userId = JSON.parse(<string>localStorage.getItem("currentUser")).id;
+    console.log(userId)
+    console.log(this.houseId)
     let newComment = {
+      home:{
+        id: this.houseId
+      },
+      user: {
+        id: userId
+      },
       content: this.commentForm.value.content,
     }
     console.log(newComment)

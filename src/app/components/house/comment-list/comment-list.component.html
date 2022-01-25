@@ -34,3 +34,13 @@
   </div>
   <!-- media -->
 </div>
+<div [formGroup]="commentForm" (ngSubmit)="submit()" class="col-md-7  col-sm-7 col-xs-12">
+  <div class="leave-review">
+    <h5>Leave a Review</h5>
+    <form action="#">
+      <textarea formControlName="content"></textarea>
+      <button class="submit-btn-1">SUBMIT REVIEW</button>
+    </form>
+  </div>
+</div>
+

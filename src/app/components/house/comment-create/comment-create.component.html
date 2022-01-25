@@ -1,20 +1,30 @@
 
-<h2 style="color: #0a70b9">Create comment</h2>
+<!--<h2 style="color: #0a70b9">Create comment</h2>-->
 
 
-<form [formGroup]="commentForm" (ngSubmit)="submit()">
-  <table>
-    <tr>
-      <td>ID:</td>
-      <td><input type="hidden" formControlName="id"></td>
-    </tr>
-    <tr>
-      <td>content:</td>
-      <td><input type="text" formControlName="content"></td>
-    </tr>
-    <tr>
-    </tr>
-  </table>
-  <button class="btn btn-warning">Submit</button>
-</form>
+<!--<form [formGroup]="commentForm" (ngSubmit)="submit()">-->
+<!--  <table>-->
+<!--    <tr>-->
+<!--      <td>ID:</td>-->
+<!--      <td><input type="hidden" formControlName="id"></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--      <td>content:</td>-->
+<!--      <td><input type="text" formControlName="content"></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--    </tr>-->
+<!--  </table>-->
+<!--  <button class="btn btn-warning">Submit</button>-->
+<!--</form>-->
+
+<div [formGroup]="commentForm" (ngSubmit)="submit()" class="col-md-7  col-sm-7 col-xs-12">
+  <div class="leave-review">
+    <h5>Leave a Review</h5>
+    <form action="#">
+      <textarea formControlName="content"></textarea>
+      <button class="submit-btn-1">SUBMIT REVIEW</button>
+    </form>
+  </div>
+</div>
 
