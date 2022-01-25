@@ -9,6 +9,7 @@ import {HttpClientModule} from "@angular/common/http";
 import { CommentListComponent } from './comment-list/comment-list.component';
 import { HomeListComponent } from './home-list/home-list.component';
 import { CommentCreateComponent } from './comment-create/comment-create.component';
+import { HomeDetailComponent } from './home-detail/home-detail.component';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { CommentCreateComponent } from './comment-create/comment-create.componen
     CommentListComponent,
     HomeListComponent,
     CommentCreateComponent,
+    HomeDetailComponent,
 
   ],
   imports: [
