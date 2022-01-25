@@ -15,8 +15,8 @@ export class CommentService {
     return this.httpClient.get<Comment[]>(API_URL2)
   }
 
-  getById(id: any): Observable<Comment> {
-    return this.httpClient.get<Comment>(API_URL2 + `/${id}`)
+  getById(id: any): Observable<Comment[]> {
+    return this.httpClient.get<Comment[]>(API_URL + `?idH=${id}`)
   }
 
   delete(id: any): Observable<Comment> {

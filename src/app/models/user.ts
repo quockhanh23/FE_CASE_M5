@@ -13,5 +13,5 @@ export interface User {
   phoneNumber?: string;
   enabled?: boolean;
   roles?: [Role];
-  imageUrls?: string;
+  avatar?: string;
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {CommentService} from "../../../services/comment.service";
 import {Comment} from "../../../models/comment";
 
@@ -8,11 +8,13 @@ import {Comment} from "../../../models/comment";
   styleUrls: ['./comment-list.component.css']
 })
 export class CommentListComponent implements OnInit {
-  comment!: Comment[]
+  @Input() id?: String
+  comment: Comment[] =[]
   constructor(private commentService: CommentService,) { }
 
   ngOnInit(): void {
-    this.commentService.getAll().subscribe(result => {
+
+    this.commentService.getById(this.id).subscribe(result => {
       // @ts-ignore
       this.comment = result
       console.log(result)
