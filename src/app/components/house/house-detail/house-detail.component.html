@@ -116,7 +116,7 @@
 <!--            </div>-->
 <!--          </div>-->
 <!--        </div>-->
-        <app-comment-list [houseId]="home.id"></app-comment-list>
+        <div *ngIf="isLoggedIn()"><app-comment-list [houseId]="home.id"></app-comment-list></div>
       </div>
       <div class="col-md-4">
         <!-- widget-search-property -->
