@@ -15,9 +15,9 @@ import {HomeComponent} from "./components/pages/home/home.component";
 import {AdminComponent} from "./components/pages/admin/admin.component";
 import {AdminAuthGuard} from "./helper/admin-auth-guard";
 import {AuthGuard} from "./helper/auth-guard";
-import { CommentListComponent } from './comment-list/comment-list.component';
+import { CommentListComponent } from './components/comment/comment-list/comment-list.component';
 
-import { CommentCreateComponent } from './comment-create/comment-create.component';
+import { CommentCreateComponent } from './components/comment/comment-create/comment-create.component';
 import { HomeDetailComponent } from './home-detail/home-detail.component';
 
 

@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {Comment} from "../models/comment";
+import {Comment} from "../../../models/comment";
 import {FormBuilder, FormControl, FormGroup} from "@angular/forms";
-import {CommentService} from "../services/comment.service";
+import {CommentService} from "../../../services/comment.service";
 import {Router} from "@angular/router";
 
 @Component({
