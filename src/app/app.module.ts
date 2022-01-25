@@ -18,7 +18,6 @@ import {AuthGuard} from "./helper/auth-guard";
 import { CommentListComponent } from './components/comment/comment-list/comment-list.component';
 
 import { CommentCreateComponent } from './components/comment/comment-create/comment-create.component';
-import { HomeDetailComponent } from './home-detail/home-detail.component';
 
 
 @NgModule({
@@ -34,8 +33,7 @@ import { HomeDetailComponent } from './home-detail/home-detail.component';
     AdminComponent,
     AppComponent,
     CommentListComponent,
-    CommentCreateComponent,
-    HomeDetailComponent,
+    CommentCreateComponent
 
   ],
   imports: [
