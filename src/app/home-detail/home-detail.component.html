@@ -124,35 +124,35 @@
           <h5>Featured Property</h5>
           <div class="row">
             <!-- flat-item -->
-            <div class="col-md-12 col-sm-6 col-xs-12" *ngFor="let ho of homes">
+            <div class="col-md-12 col-sm-6 col-xs-12">
               <div class="flat-item">
                 <div class="flat-item-image">
-                  <span class="for-sale">{{ho.statusHome?.name}}</span>
-                  <a [routerLink]="['detail', ho?.id]"><img src="assets/images/flat/1.jpg" alt=""></a>
+                  <span class="for-sale">For Sale</span>
+                  <a href="#"><img src="assets/images/flat/1.jpg" alt=""></a>
                   <div class="flat-link">
-                    <a [routerLink]="['detail', ho?.id]">More Details</a>
+                    <a href="#">More Details</a>
                   </div>
                   <ul class="flat-desc">
                     <li>
                       <img src="assets/images/icons/4.png" alt="">
-                      <span>{{ho.area}} m<sup>2</sup></span>
+                      <span>450 sqft</span>
                     </li>
                     <li>
                       <img src="assets/images/icons/5.png" alt="">
-                      <span>{{ho.bedroom}}</span>
+                      <span>5</span>
                     </li>
                     <li>
                       <img src="assets/images/icons/6.png" alt="">
-                      <span>{{ho.showerRoom}}</span>
+                      <span>3</span>
                     </li>
                   </ul>
                 </div>
                 <div class="flat-item-info">
                   <div class="flat-title-price">
-                    <h5><a [routerLink]="['detail', ho?.id]">{{ho.name}}</a></h5>
-                    <span class="price">{{ho.price}} VNĐ</span>
+                    <h5><a href="#">Masons de Villa </a></h5>
+                    <span class="price">$52,350</span>
                   </div>
-                  <p><img src="assets/images/icons/location.png" alt="">{{ho.address}}</p>
+                  <p><img src="assets/images/icons/location.png" alt="">568 E 1st Ave, Ney Jersey</p>
                 </div>
               </div>
             </div>

@@ -1,1 +1,60 @@
-<p>house-list works!</p>
+<div class="featured-flat-area pt-115 pb-80">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="section-title-2 text-center">
+          <h2>Featured PROPERTY</h2>
+          <p>Sheltek is the best theme for elit, sed do eiusmod tempor dolor sit amet, conse ctetur adipiscing elit, sed
+            do eiusmod tempor incididunt ut labore et lorna aliquatd minim veniam, quis nostrud</p>
+        </div>
+      </div>
+    </div>
+    <div class="featured-flat">
+      <div class="row">
+        <!-- flat-item -->
+        <div class="col-md-4 col-sm-6 col-xs-12" *ngFor="let ho of home">
+          <div class="flat-item">
+            <div class="flat-item-image f1">
+                  <span
+                    style="  font-family: 'Comforter', cursive !important;font-family: 'Open Sans', sans-serif !important;"
+                    class="for-sale f1">{{ho.statusHome?.name}}</span>
+              <a style="" [routerLink]="['detail', ho?.id]"><img src="assets/images/flat/1.jpg" alt=""></a>
+              <div class="flat-link f1">
+                <a
+                  style="  font-family: 'Comforter', cursive !important;font-family: 'Open Sans', sans-serif !important;"
+                 [routerLink]="['detail', ho?.id]">More Details</a>
+              </div>
+              <ul class="flat-desc">
+                <li>
+                  <img src="assets/images/icons/4.png" alt="">
+                  <span class="f1">{{ho.area}} m<sup>2</sup></span>
+                </li>
+                <li>
+                  <img src="assets/images/icons/5.png" alt="">
+                  <span class="f1">{{ho.bedroom}}</span>
+                </li>
+                <li>
+                  <img src="assets/images/icons/6.png" alt="">
+                  <span class="f1">{{ho.showerRoom}}</span>
+                </li>
+              </ul>
+            </div>
+            <div class="flat-item-info">
+              <div class="flat-title-price">
+                <h5 class="f1"><a
+                  style="  font-family: 'Comforter', cursive !important;font-family: 'Open Sans', sans-serif !important;"
+                  [routerLink]="['detail', ho?.id]">{{ho.name}}</a></h5>
+                <span class="price f1">{{ho.price}} VNĐ</span>
+              </div>
+              <p class="f1"><img
+                style=" font-family: 'Comforter', cursive !important;font-family: 'Open Sans', sans-serif !important;"
+                src="assets/images/icons/location.png" alt="">{{ho.address}}</p>
+            </div>
+          </div>
+        </div>
+        <!-- flat-item -->
+
+      </div>
+    </div>
+  </div>
+</div>

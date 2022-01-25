@@ -15,6 +15,11 @@ import {HomeComponent} from "./components/pages/home/home.component";
 import {AdminComponent} from "./components/pages/admin/admin.component";
 import {AdminAuthGuard} from "./helper/admin-auth-guard";
 import {AuthGuard} from "./helper/auth-guard";
+import { CommentListComponent } from './comment-list/comment-list.component';
+
+import { CommentCreateComponent } from './comment-create/comment-create.component';
+import { HomeDetailComponent } from './home-detail/home-detail.component';
+
 
 @NgModule({
   declarations: [
@@ -26,14 +31,22 @@ import {AuthGuard} from "./helper/auth-guard";
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    AdminComponent
+    AdminComponent,
+    AppComponent,
+    CommentListComponent,
+    CommentCreateComponent,
+    HomeDetailComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [
     AdminAuthGuard,
