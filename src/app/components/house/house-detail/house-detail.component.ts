@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {Home} from "../../../models/home";
+
 import {HomeService} from "../../../services/home.service";
 import {ActivatedRoute} from "@angular/router";
+import {Home} from "../../../models/home";
 
 @Component({
   selector: 'app-house-detail',
