@@ -22,22 +22,25 @@ const routes: Routes = [
         path: "house",
         loadChildren: () => import('./components/house/house.module').then(module => module.HouseModule)
     },
+      {
+        path: 'login',
+        component: LoginComponent
+      },
+      {
+        path: 'register',
+        component: RegisterComponent
+      },
+      {
+        path:'admin',
+        canActivate: [AdminAuthGuard],
+        component: AdminComponent
+      }
     ],
 
   },
-  {
-    path: 'login',
-    component: LoginComponent
-  },
-  {
-    path: 'register',
-    component: RegisterComponent
-  },
-  {
-    path:'admin',
-    canActivate: [AdminAuthGuard],
-    component: AdminComponent
-  }
+
+
+
 ];
 
 @NgModule({
