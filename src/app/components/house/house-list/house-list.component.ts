@@ -33,4 +33,5 @@ export class HouseListComponent implements OnInit {
       console.log(error)
     })
   }
+
 }
