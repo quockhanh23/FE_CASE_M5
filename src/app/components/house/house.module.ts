@@ -8,7 +8,6 @@ import {RouterModule, Routes} from "@angular/router";
 import {CommentListComponent} from "./comment-list/comment-list.component";
 import {ReactiveFormsModule} from "@angular/forms";
 
-
 const routes: Routes = [
   {
     path: '',

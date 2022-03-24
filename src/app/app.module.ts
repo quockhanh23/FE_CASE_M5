@@ -15,6 +15,8 @@ import {HomeComponent} from "./components/pages/home/home.component";
 import {AdminComponent} from "./components/pages/admin/admin.component";
 import {AdminAuthGuard} from "./helper/admin-auth-guard";
 import {AuthGuard} from "./helper/auth-guard";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MaterialModule} from "./material/material.module";
 
 
 
@@ -30,6 +32,7 @@ import {AuthGuard} from "./helper/auth-guard";
     HomeComponent,
     AdminComponent,
     AppComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -39,7 +42,8 @@ import {AuthGuard} from "./helper/auth-guard";
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [
     AdminAuthGuard,
@@ -48,6 +52,7 @@ import {AuthGuard} from "./helper/auth-guard";
   exports: [
 
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+
 })
 export class AppModule { }

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 import {HomeService} from "../../../services/home.service";
 import {CategoryService} from "../../../services/category.service";
 import {Home} from "../../../models/home";
@@ -33,5 +32,4 @@ export class HouseListComponent implements OnInit {
       console.log(error)
     })
   }
-
 }

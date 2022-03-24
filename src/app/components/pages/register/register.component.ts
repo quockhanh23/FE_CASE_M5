@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup} from "@angular/forms";
 import {UserService} from "../../../services/user.service";
 import {User} from "../../../models/user";
-import {error} from "@angular/compiler/src/util";
 import {Router} from "@angular/router";
+import {MatDialog} from "@angular/material/dialog";
 
 @Component({
   selector: 'app-register',
@@ -17,7 +17,9 @@ export class RegisterComponent implements OnInit {
     confirmPassword: new FormControl('')
   });
 
-  constructor(private userService: UserService, private router: Router) {
+  constructor(private userService: UserService,
+              private router: Router,
+              public dialog: MatDialog) {
 
   }
 
@@ -38,9 +40,6 @@ export class RegisterComponent implements OnInit {
     }, error => {
       console.log(error)
       alert("Oops! Something has been wrong. Please try again! ")
-
     })
-
   }
-
 }

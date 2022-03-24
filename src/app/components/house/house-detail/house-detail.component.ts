@@ -35,7 +35,6 @@ export class HouseDetailComponent implements OnInit {
     })
   }
 
-
   isLoggedIn(): boolean {
     if(localStorage.getItem("currentUser") != null){
       return true;

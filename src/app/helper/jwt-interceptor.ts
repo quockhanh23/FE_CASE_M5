@@ -4,7 +4,6 @@ import { HttpRequest, HttpHandler, HttpEvent, HttpInterceptor } from '@angular/c
 import {Observable} from 'rxjs';
 import {AuthenticationService} from "../services/authentication.service";
 
-
 @Injectable()
 export class JwtInterceptor implements HttpInterceptor { //Interceptor: đánh chặn, đại loại là thêm 1 thao tác vào trước 1 bước tương tác với http
   constructor(private authenticationService: AuthenticationService) { }
@@ -18,7 +17,6 @@ export class JwtInterceptor implements HttpInterceptor { //Interceptor: đánh c
         }
       });
     }
-
     return next.handle(request);
   }
 }

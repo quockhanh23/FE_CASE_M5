@@ -3,6 +3,7 @@ import {FormControl, FormGroup} from "@angular/forms";
 import {ActivatedRoute, Router} from "@angular/router";
 import {AuthenticationService} from "../../../services/authentication.service";
 import {first} from "rxjs/operators";
+import {MatDialog} from "@angular/material/dialog";
 
 @Component({
   selector: 'app-login',
@@ -23,7 +24,8 @@ export class LoginComponent implements OnInit {
   loading = false;
   submitted = false;
 
-  constructor(private activatedRoute: ActivatedRoute,
+  constructor(public dialog: MatDialog,
+    private activatedRoute: ActivatedRoute,
               private router: Router,
               private authenticationService: AuthenticationService) {
     console.log(this.authenticationService.currentUserValue);
@@ -53,12 +55,9 @@ export class LoginComponent implements OnInit {
           } else {
             this.router.navigate([this.returnUrl]);
           }
-
         },
         error => {
-          alert("Tài khoản của bạn đã bị khoá hoặc sai mật khẩu!");
           this.loading = false;
         });
   }
-
 }

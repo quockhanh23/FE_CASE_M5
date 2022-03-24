@@ -11,7 +11,6 @@ import {Router} from "@angular/router";
 })
 export class CommentListComponent implements OnInit {
 
-
   commentForm: FormGroup = this.fb.group({
 
     content: new FormControl(''),
@@ -22,7 +21,6 @@ export class CommentListComponent implements OnInit {
               private fb: FormBuilder) { }
 
   ngOnInit(): void {
-
     this.commentService.getById(this.houseId).subscribe(result => {
       // @ts-ignore
       this.comment = result
